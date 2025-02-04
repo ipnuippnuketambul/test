@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Umpan Balik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #0d727e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #08525d;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container a {
+            background-color:  #08525d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .button-container a:hover {
+            background-color: #2d8a4f;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Umpan Balik</h2>
+        <h2>BERI TANGGAPAN & SARAN UNTUK WEBSITE / KINERJA KAMI</h2>
+        <form action="https://formspree.io/f/mvgzrdqj" method="POST">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="number">Nomor Telepon:</label>
+            <input type="text" id="number" name="number" required>
+
+            <label for="origin">Asal:</label>
+            <input type="text" id="origin" name="origin" required>
+
+            <label for="group">Golongan:</label>
+            <select id="group" name="group" required>
+                <option value="alumni">Alumni</option>
+                <option value="setempat">Warga Ketambul</option>
+                <option value="luar">Warga Luar</option>
+            </select>
+
+            
+            <label for="feedback">Kritik/Saran:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+    <div class="button-container">
+        <a href="index.html">Kembali</a>
+    </div>
+</body>
+</html>

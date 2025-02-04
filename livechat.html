@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat dengan Crisp</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+
+        #content-container {
+            width: 80%;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+        #back-button {
+            padding: 10px 20px;
+            background: #111b91;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #back-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="content-container">
+        <h1>Selamat Datang di Situs Kami</h1>
+        <p>Jika Anda memiliki pertanyaan, silakan chat dengan kami menggunakan widget chat Crisp!</p>
+        <p>Kirim pesan dengan klik tombol di pojok bawah.</p>
+        <p>Tunggu sebentar...</p>
+        <button id="back-button" onclick="window.location.href='index.html'">Kembali ke Halaman Utama</button>
+    </div>
+    
+    <!-- Kode Widget Chat Crisp -->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="3f9a4f07-5481-41b2-bee5-3247b40172f4";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    </script>
+    <!-- Akhir dari Kode Widget Chat Crisp -->
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ipnuippnuketambul</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #35a85d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 16px;
+            margin-right: 5px; /* Jarak antara gambar dan teks */
+        }
+
+        header .logo span {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #d8d8d8;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-top: 46px;
+            padding: 1px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 5px;
+            font-size: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        nav ul li a:hover, nav ul li a:active {
+            color: rgb(197, 202, 197);
+            background-color: #0d727e;
+            border-radius: 5px;
+        }
+
+        nav ul li a img {
+            height: 10px;
+            margin-right: 5px;
+        }
+
+        .hero {
+            background-image: url('utama.jpg');
+            background-size: 100% 100%;
+            color: #444;
+            text-align: center;
+            padding: 100px 20px;
+            height: 150px;
+            margin-top: 0px;
+        }
+        .hero h1 {
+    margin-top: -50px;
+    font-size: 30px;
+         }
+        
+        .content, .team, .matches {
+            padding: 20px;
+            height: 10%;
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+        }
+        .horizontal-scroll {
+            padding: 20px;
+             font-family: 'Times New Roman', Times, serif;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        /* Efek visual terpisah untuk masing-masing konten */
+       /* ... kode CSS sebelumnya ... */
+
+/* Efek visual terpisah untuk masing-masing konten */
+
+/* Konten Berita */
+.content-effect {
+    transition: transform 0.6s;
+}
+
+.content-effect:hover, .content-effect:active {
+    transform: scale(1.02);
+}
+
+/* Konten Tim */
+.team-effect {
+    transition: transform 0.5s;
+}
+
+.team-effect:hover, .team-effect:active {
+    transform: scale(1.03);
+}
+
+/* Konten Pertandingan */
+.matches-effect {
+    transition: transform 0.7s;
+}
+
+.matches-effect:hover, .matches-effect:active {
+    transform: scale(1.01);
+}
+
+/* Konten Horizontal Scroll */
+.horizontal-scroll-effect div {
+    transition: transform 0.5s;
+}
+
+.horizontal-scroll-effect div:hover, .horizontal-scroll-effect div:active {
+    transform: scale(1.05);
+}
+
+/* ... kode CSS lainnya ... */
+
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: normal;
+            margin-top: 0;
+            text-decoration: none; /* Menghilangkan garis bawah pada teks */
+        }
+
+        .horizontal-scroll {
+            overflow-x: auto;
+            display: flex;
+            padding: 10px 0;
+            
+            
+        }
+
+        .horizontal-scroll h2 {
+            text-align: top;
+            width: 100%;
+            margin-bottom: 20px;
+            
+        }
+
+        .horizontal-scroll div {
+            min-width: 200px;
+            
+            background-color: #eee;
+            margin-right: 10px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s;
+        }
+
+        .content img, .team img, .matches img, .horizontal-scroll img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            
+        }
+        .horizontal-scroll p {
+    color: black;
+    margin: 0; /* Opsional */
+}
+    footer{
+        font-size: 10px;
+        background-color: #222;
+    }
+
+        /* Media Queries untuk Mobile */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: row;
+                overflow-x: auto;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 10px;
+            }
+
+            .hero {
+                padding: 50px 20px;
+            }
+
+            .content, .team, .matches {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .horizontal-scroll div {
+                min-width: 150px;
+            }
+        }
+         /* Styling untuk tombol baru di nav */
+#showMoreLink {
+    background-color: transparent; /* Menghapus background */
+    border: none; /* Menghapus border */
+    color: #0d727e; /* Warna teks */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#showMoreLink:hover {
+    background-color: #f0f0f0; /* Memberikan efek hover */
+}
+
+#moreContent {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: #d8d8d8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: auto;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+#moreContent.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#moreContent button {
+    background-color: transparent;
+    color: #222;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+#moreContent button:hover {
+    background-color: #f0f0f0;
+}
+
+#moreContent ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#moreContent ul li {
+    margin-bottom: 10px;
+}
+
+#moreContent ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #0a0202;
+}
+
+#moreContent ul li a:hover, #moreContent ul li a:active {
+    color: #fff;
+    background-color: #0d727e;
+}
+
+#moreContent ul li a img {
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/* CSS untuk layar loading */
+#loading-screen {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #ffffff; /* Warna background layar loading */
+        z-index: 1001;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 1s ease-in-out; /* Menambahkan transisi untuk opacity */
+        opacity: 1; /* Menetapkan nilai awal untuk opacity */
+    }
+
+    #loading-screen img {
+        width: 100px; /* Sesuaikan ukuran gambar animasi */
+        height: auto;
+        
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .image-scroll-container {
+    display: flex;
+    overflow-x: auto;  /* Aktifkan pengguliran horizontal */
+    gap: 20px;  /* Jarak antara gambar, sesuaikan sesuai kebutuhan */
+    max-width: 100%;  /* Pastikan kontainer tidak meluap */
+    scroll-behavior: smooth;  /* Tambahkan pengguliran halus */
+    cursor: grab;  /* Ganti kursor saat menggulir secara manual */
+}
+
+.image-scroll-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="loading-screen">
+        <img src="load.gif" alt="Loading...">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                // Menurunkan opacity layar loading
+                document.getElementById("loading-screen").style.opacity = "0";
+                
+                // Menghapus layar loading setelah transisi selesai
+                setTimeout(function() {
+                    document.getElementById("loading-screen").style.display = "none";
+                }, 1000); // Sesuaikan waktu ini dengan durasi transisi opacity
+            }, 1500);
+        });
+    </script>
+    <header>
+        <div class="logo">
+            <img src="ipnuippnu.png" alt="Logo IPNU IPPNU">
+            <span>IPNU & IPPNU DESA KETAMBUL</span>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <button id="showMoreLink">
+                <img src="navbar.png" alt="Logo" style="height: 16px; vertical-align: middle;"> 
+            </button>
+            <li><a href="latarbelakang.html"><img src="latarbelakang.png" alt="Kegiatan">LATAR BELAKANG</a></li>
+            <li><a href="sejarah.html"><img src="logosejarah.png" alt="Sejarah">SEJARAH</a></li>
+            <li><a href="visimisi.html"><img src="visimisi.png" alt="Kegiatan">VISI MISI</a></li>
+            <li><a href="daftartahun.html"><img src="logoprofil.png" alt="Profil">PROFIL ANGGOTA</a></li>
+            <li><a href="struktur.html"><img src="logostruktur.png" alt="Struktur">STRUKTUR ORGANISASI</a></li>
+            <li><a href="daftarkegiatan.html"><img src="logokegiatan.png" alt="Kegiatan">KEGIATAN</a></li>
+            <li><a href="agenda.html"><img src="agenda.png" alt="Kegiatan">AGENDA</a></li>
+            <li><a href="tugasdivisi.html"><img src="tugas.png" alt="Tugas">TUGAS DIVISI</a></li>
+            <li><a href="progamkerja.html"><img src="progam.jpg" alt="Program">CONTOH PROGAM KERJA</a></li>
+            <li><a href="panitia.html"><img src="panitia.png" alt="Program">KEPANITIAAN</a></li>
+            <li><a href="surat.html" onclick="checkPassword();"><img src="surat.png" alt="Surat">CONTOH SURAT-SURAT</a></li>
+            <li><a href="laguwajib.html"><img src="logolagu.png" alt="Lagu">LAGU WAJIB</a></li>
+        </ul>
+        <script>
+            function checkPassword() {
+                const password = prompt("Masukkan password untuk mengakses halaman ini:");
+                if (password === "ipnu") {
+                    window.location.href = "sejarah.html";
+                } else {
+                    alert("Password salah. Akses ditolak.");
+                }
+            }
+        </script>
+    </nav>
+    <div id="moreContent" style="display: none;">
+        <button id="hideMoreLink">
+            <img src="back.png" alt="Logo" style="height: 16px; vertical-align: middle; margin-right: 5px;">
+            back
+        </button>
+        <ul>
+            <li><a href="https://www.instagram.com/ipnuippnuketambul_/"><img src="instagram.png" alt="Instagram" style="height: 16px; vertical-align: middle; margin-right: 5px;"> Instagram</a></li>
+            <li><a href="folmulir.html"><img src="surat.png" alt="Kritik&Saran" style="height: 16px; vertical-align: middle; margin-right: 5px;"> Kritik&Saran</a></li>
+            <li><a href="livechat.html"><img src="chat.png" alt="Kritik&Saran" style="height: 16px; vertical-align: middle; margin-right: 5px;"> chat admin</a></li>
+            <li><a href="comingson.html"><img src="monitor.png" alt="Kritik&Saran" style="height: 16px; vertical-align: middle; margin-right: 5px;"> Event Monitor</a></li>
+            <li><a href="comingsonberita.html"><img src="berita.png" alt="Kritik&Saran" style="height: 16px; vertical-align: middle; margin-right: 5px;"> BERITA</a></li>
+        </ul>
+    </div>
+    
+   
+    <script>
+        document.getElementById('showMoreLink').addEventListener('click', function() {
+            const moreContent = document.getElementById('moreContent');
+            if (!moreContent.classList.contains('show')) {
+                moreContent.style.display = 'block';
+                setTimeout(() => {
+                    moreContent.classList.add('show');
+                }, 10); // Memberikan sedikit penundaan agar transisi berjalan dengan lancar
+            }
+        });
+    
+        document.getElementById('hideMoreLink').addEventListener('click', function() {
+            const moreContent = document.getElementById('moreContent');
+            if (moreContent.classList.contains('show')) {
+                moreContent.classList.remove('show');
+                setTimeout(() => {
+                    moreContent.style.display = 'none';
+                }, 300); // Sesuaikan durasi timeout dengan durasi transisi
+            }
+        });
+    </script>
+    </body>
+    
+    
+    <main>
+        <section class="hero">
+            <h1><strong> </strong></h1>
+            <p></p>
+        </section>
+        <section class="content content-effect">
+            <h2>BERITA TERKINI</h2>
+            <div class="image-scroll-container" id="carousel">
+                <img src="lpjj.jpg" alt="Latest News">
+                <img src="lpj2.jpg" alt="Latest News">
+                <img src="lpj3.jpg" alt="Latest News">
+                <img src="lpj4.jpg" alt="Latest News">
+            </div>
+            <article>
+                <h3>Laporan Pertanggung Jawaban</h3>
+                <p>Tahun 2023</p>
+                <p>Lebih Jelasnya, klik disini <a href="agenda.html#kursus">Laporan Pertanggungjawaban</a></p>
+            </article>
+        </section>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const carousel = document.getElementById("carousel");
+                let scrollAmount = 0;
+                const scrollStep = 2; // Kecepatan pengguliran
+                const delay = 30; // Waktu tunggu antara setiap langkah pengguliran
+        
+                function scrollHorizontally() {
+                    carousel.scrollLeft += scrollStep;
+                    scrollAmount += scrollStep;
+        
+                    if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+                        scrollAmount = 0;
+                        carousel.scrollLeft = 0;
+                    }
+                }
+        
+                let autoScroll = setInterval(scrollHorizontally, delay);
+        
+                // Hentikan pengguliran otomatis saat pengguna mulai menggulir secara manual
+                carousel.addEventListener('mousedown', () => clearInterval(autoScroll));
+                carousel.addEventListener('touchstart', () => clearInterval(autoScroll));
+        
+                // Lanjutkan pengguliran otomatis setelah beberapa detik tidak ada aktivitas manual
+                carousel.addEventListener('mouseup', () => autoScroll = setInterval(scrollHorizontally, delay));
+                carousel.addEventListener('touchend', () => autoScroll = setInterval(scrollHorizontally, delay));
+            });
+        </script>
+        
+        
+        
+        <section class="team team-effect">
+            <h2>Ziarah 2024</h2>
+            <img src="zaroh.jpg" alt="Team">
+            <ul>
+                <li>Ziarah Wali Tuban</li>
+                <li>Desember 2024</li>
+                <li>Agenda Terakhir tahun 2024. Lebih jelas cek disini <a href="ziarah.html">Ziarah</a></li>
+            </ul>
+        </section>
+        <section class="matches matches-effect">
+            <h2>PAC IPNU & IPPNU PALANG</h2>
+            <img src="visitasi.jpg" alt="Matches">
+            <ul>
+                <li>Penilaian dari PAC</li>
+                <li>VISITASI</li>
+                <li>Sharing Time. lebih jelas klik <a href="agenda.html#VISITASI">visitasi</a></li>
+            </ul>
+        </section>
+        <section class="matches matches-effect">
+            <h2>JOIN SEKARANG</h2>
+            <img src="daftar.png" alt="Matches">
+            <ul>
+                <li>daftarkan diri anda untuk pengalaman organisasi yang bermanfaat</li>
+                <li>Klik disini. <a href="https://docs.google.com/forms/d/e/1FAIpQLSffrZnYAUwOARhpJHphVOADBUFQ4zQXefgeQVH--xW9PeBXKg/viewform?usp=preview">G.Form</a></li>
+            </ul>
+        </section>
+        <section class="horizontal-scroll horizontal-scroll-effect">
+            <h2></h2>
+            <div>
+                <a href="isra.html" style="text-decoration: none;">
+                    <img src="isramiraj.png" alt="Content 1">
+                    <p>Isra Mi'raj</p>
+                </a>
+            </div>
+            <div>
+                <a href="ramadan.html" style="text-decoration: none;">
+                    <img src="ramadan.png" alt="Content 2">
+                    <p>Bulan Ramadhan</p>
+                </a>
+            </div>
+            <div>
+                <a href="idulfitri.html" style="text-decoration: none;">
+                    <img src="idulfitri.png" alt="Content 3">
+                    <p>Idul Fitri (Halal Bi Halal)</p>
+                </a>
+            </div>
+            <div>
+                <a href="iduladha.html" style="text-decoration: none;">
+                    <img src="iduladha.png" alt="Content 4">
+                    <p>Idul Adha</p>
+                </a>
+            </div>
+            <div>
+                <a href="maulid.html" style="text-decoration: none;">
+                    <img src="maulid.png" alt="Content 5">
+                    <p>Maulid Nabi Muhammad</p>
+                </a>
+            </div>
+            <div>
+                <a href="tahunbaru.html" style="text-decoration: none;">
+                    <img src="tahunbaru.png" alt="Content 6">
+                    <p>Tahun Baru Islam</p>
+                </a>
+            </div>
+            <div>
+                <a href="ziarah.html" style="text-decoration: none;">
+                    <img src="ziarah.png" alt="Content 7">
+                    <p>Ziarah</p>
+                </a>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; IPNU&IPPNUKETAMBUL.</p>
+        <a href="https://www.instagram.com/ipnuippnuketambul_/" target="_blank">
+        </a>
+    </footer>
+</body>
+</html>
