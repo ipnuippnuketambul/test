@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            color: #333;
+        }
+        header {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header-title {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header-subtitle {
+            margin: 0;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        .container {
+            width: 100%;
+            display: flex;
+            padding: 10px;
+            box-sizing: border-box;
+            flex-grow: 1;
+            justify-content: center; /* Menyelaraskan kontainer gambar di tengah secara horizontal */
+        }
+        .image-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .image {
+            width: 85%; /* Sesuaikan lebar gambar */
+            max-height: 350px; /* Sesuaikan tinggi maksimal gambar */
+            margin-bottom: 10px; /* Memberikan jarak antara gambar dan teks */
+        }
+        .caption {
+            font-size: 22px; /* Perbesar ukuran font */
+            font-weight: bold;
+        }
+        footer {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">Selamat Datang di Struktur Anggota</div>
+        <div class="header-subtitle">Silahkan klik logo</div>
+    </header>
+    <div class="container">
+        <div class="image-container">
+            <a href="periodeipnu.html">
+                <img src="logoipnu.png" alt="IPNU" class="image">
+            </a>
+            <div class="caption">IPNU</div>
+        </div>
+        <div class="image-container">
+            <a href="periodeippnu.html">
+                <img src="ippnu.png" alt="IPPNU" class="image">
+            </a>
+            <div class="caption">IPPNU</div>
+        </div>
+    </div>
+    <footer>
+        <a href="index.html">Kembali</a>
+    </footer>
+</body>
+</html>
